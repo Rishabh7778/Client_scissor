@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
 body {
-  color: #fff;
-  font-family: 'Poppins', sans-serif;  
+  color: #fff; 
   margin: 0;
   padding: 0;
+  font-family: "Salsa", serif;
 }
 
 .section1{
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,16 +19,26 @@ body {
   padding: 0;
 }
 
-.section2{
+.section2 {
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center; /* Add this for vertical alignment */
   padding: 0px 10px;
-  color: wheat
+  color: wheat;
+  flex-wrap: nowrap; /* Prevent wrapping to new line */
+}
+
+.section2 h2{
+  font-size: 2rem;
+}
+
+.section2 p{
+  font-size: 1.5rem;
 }
 
 .section3{
-  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
   height: 100vh;
   width: 100%;
   display: flex;
@@ -45,11 +57,15 @@ input[type="text"] {
 }
 
 .button-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   border: none;
   padding: 12px 25px;
   font-size: 1.2rem;
-  color: #fff;
+  color: #020000;
   cursor: pointer;
   border-radius: 10px;
   margin: 10px;
@@ -81,7 +97,14 @@ input[type="text"] {
 }
 
 #result h2 {
-  color: #ffeb3b;
+  font-size: 4rem;
+  /* color: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+  /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+}
+
+.Choice-result h3{
+  font-size: 1.5rem;
+  color: wheat;
 }
 
 button:active {
@@ -103,4 +126,383 @@ button:active {
 .button1:hover {
   background: linear-gradient(45deg, #ff4b2b, #ff416c);
   transform: scale(1.05);
+}
+
+.homeImg {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  text-align: center;
+}
+
+.content h1{
+  font-size: 8rem;
+}
+
+/* ✨ Animated Gradient Text ✨ */
+.animated-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background-image: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #0044ff, #a200ff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s infinite linear alternate, bounceText 1.5s infinite ease-in-out;
+}
+
+/* 🎨 Gradient Animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🎵 Bounce Effect */
+@keyframes bounceText {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.content button {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 40px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 2rem;
+  padding: 0.6em 1.5em;
+ }
+ 
+ .content button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+ }
+ 
+ @keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #05bada66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+ }
+
+
+ .mode {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Y-axis पर सेंटर */
+  align-items: center; /* X-axis पर सेंटर */
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+  color: white;
+  text-align: center;
+}
+
+.mode h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  background-size: 300% 300%;
+}
+
+
+/* Style for the buttons */
+.btn {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: linear-gradient(45deg, #ff5722, #ff9800);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+.game-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  font-size: 48px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.choice-btn {
+  font-size: 32px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #eee;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.choice-btn:hover {
+  transform: scale(1.1);
+  background: #ddd;
+}
+
+.result {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 18px;
+}
+
+.score p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reset-btn:hover {
+  background: #cc0000;
+}
+
+.game-result {
+  margin: 20px 0;
+} 
+
+
+
+
+/* Add these media queries for responsive text sizing */
+@media (max-width: 600px) {
+  .section2 {
+    padding: 0px 5px;
+  }
+  
+  .section2 h2 {
+    font-size: 1.2rem;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .section2 p {
+    font-size: 1rem;
+  }
+  
+  .section2 .status {
+    font-size: 1.2rem;
+    margin: 0 5px; /* Adjust spacing between elements */
+  }
+}
+
+/* Existing styles remain unchanged */
+
+/* Add these new responsive styles at the end */
+@media (max-width: 600px) {
+  .game-container {
+    padding: 10px;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .choices {
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .choice-btn {
+    font-size: 24px;
+    padding: 15px;
+    min-width: 80px;
+  }
+
+  .result {
+    font-size: 18px;
+    margin: 15px 0;
+  }
+
+  .score {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  .score p {
+    font-size: 1.5rem;
+  }
+
+  .reset-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .section2 h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section2 p {
+    font-size: 1.2rem;
+  }
+  
+  .section2 .status {
+    font-size: 1.8rem;
+  }
+
+  .game-container {
+    padding: 15px;
+  }
+
+  .choices {
+    font-size: 40px;
+    margin: 30px 0;
+  }
+
+  .choice-btn {
+    font-size: 28px;
+    padding: 18px;
+  }
+
+  .result {
+    font-size: 20px;
+  }
+
+  .score p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .section2 h2 {
+    font-size: 2rem;
+  }
+  
+  .section2 p {
+    font-size: 1.5rem;
+  }
+  
+  .section2 .status {
+    font-size: 2.5rem;
+  }
+
+  .game-container {
+    max-width: 90%;
+  }
+
+  .choices {
+    font-size: 44px;
+  }
+}
+
+/* Mobile Landscape Optimization */
+@media (max-height: 500px) and (orientation: landscape) {
+  .game-container {
+    padding-top: 30px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .choices {
+    margin: 20px 0;
+    font-size: 32px;
+  }
+
+  .buttons {
+    margin-bottom: 15px;
+  }
+
+  .choice-btn {
+    font-size: 24px;
+    padding: 12px;
+  }
+}
+
+/* Tablet Optimization */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .game-container {
+    max-width: 80%;
+  }
+
+  .choices {
+    font-size: 48px;
+  }
+
+  .choice-btn {
+    font-size: 36px;
+    padding: 25px;
+  }
+}
+
+/* High-DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .choice-btn {
+    border-radius: 12px;
+  }
 }
